@@ -1,4 +1,4 @@
-var stripe = Stripe('pk_live_51LHQz9Do11d76qd2C4jhpleA44trjLvSqRgMx0Upx3tdCdvMPMsFCammgT8wFZW4glzY7idyHptl6qz5p8Vdrm3Q00SGkfnVHl');
+var stripe = Stripe('pk_test_51LHQz9Do11d76qd27Z4g5cfEFcrf8w4lc5EJc4ySkA0bCNNp1Fs1oUOVm4T6SdYnuuMZ46ioQ8r6PgTr64iyvj9500zjOu5Kxe');
 
 const purchaseButton = document.querySelector('.comprarButton');
 purchaseButton.addEventListener('click', initPayment);
@@ -113,10 +113,18 @@ var loading = function (isLoading) {
 };
 
 function saveOrderInDataBase() {
+  const calle = document.getElementById('calle-element').value;
+  const colonia = document.getElementById('colonia-element').value;
+  const delegacion = document.getElementById('delegacion-element').value;
+  const estado = document.getElementById('estado-element').value;
   const email = document.getElementById('email-element').value;
   const shoppingCart = localStorage.getItem('shoppingCart');
 
   const dataToSend = {
+    calle: calle,
+    colonia: colonia,
+    delegacion: delegacion,
+    estado: estado,
     email: email,
     items: JSON.parse(shoppingCart),
   };

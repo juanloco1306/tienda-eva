@@ -1,4 +1,4 @@
-const serverUrl = 'https://git.heroku.com/shoping-eva.git';
+const serverUrl = 'http://localhost:5000/';
 const itemsPath = 'items/';
 const imagesPath = 'img/';
 
