@@ -1,4 +1,4 @@
-const serverUrl = 'http://localhost:5000/';
+const serverUrl = 'https://tienda-eva.herokuapp.com/';
 const itemsPath = 'items/';
 const imagesPath = 'img/';
 
